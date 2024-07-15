@@ -1,4 +1,3 @@
-*.mp4
 *.pt
 venv/
 counter_region_output/
