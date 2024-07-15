@@ -130,7 +130,6 @@ def run(
                             region["counts"] += 1
                         elif counter_accumulated and prev_position is not None and track_id not in count_ids:
                             count_ids.append(track_id)
-                            # if (box[0] - prev_position[0]) * (region["polygon"].centroid.x - prev_position[0]) > 0:
                             region["counts"] += 1
                             
 
