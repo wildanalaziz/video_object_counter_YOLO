@@ -43,7 +43,7 @@ def click_event(event, x, y, flags, params):
 if __name__=="__main__": 
   
     # reading the image 
-    source = "rtsp://user:password@127.0.0.1:22/H.264"
+    source = "rtsp://admin:xxx@192.0.230.0:554/ch1/main"
     cv2.namedWindow("image", cv2.WINDOW_NORMAL) 
     frame_w, frame_h = 1280,720
 
@@ -62,8 +62,13 @@ if __name__=="__main__":
         cv2.setMouseCallback('image', click_event) 
     
         # wait for a key to be pressed to exit 
-        if cv2.waitKey(1) & 0xFF == ord("q"):
-            break
+        # if cv2.waitKey(1) & 0xFF == ord("q"):
+            # break
+        key = cv2.waitKey(1)
+        if key == ord("p"):
+            cv2.waitKey(0)
+        elif key & 0xFF == ord("q"):
+            break         
   
     # close the window 
     cv2.destroyAllWindows() 
